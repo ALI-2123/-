@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>عِش بصحة | Live Well</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3fbf4;--surface:#ffffff;--ink:#0d3b2c;--soft:#3f6556;--green:#1f9d62;--mint:#c4f2d3;--sun:#ff7a3d;--line:#cfe8d6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1f17;--surface:#12301f;--ink:#e8fbee;--soft:#9cc7ae;--green:#4fdb97;--mint:#1c4a33;--sun:#ff9462;--line:#245a3f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0a1f17;--surface:#12301f;--ink:#e8fbee;--soft:#9cc7ae;--green:#4fdb97;--mint:#1c4a33;--sun:#ff9462;--line:#245a3f;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Tajawal,Tahoma,sans-serif;font-size:18px;line-height:1.8}
+h1,h2,h3{font-family:Cairo,Tahoma,sans-serif;line-height:1.25;margin:0 0 .5em}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:2px solid var(--line);display:flex;align-items:center;gap:6px;padding:10px 20px;flex-wrap:wrap}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+.logo{font-family:Cairo,sans-serif;font-weight:900;font-size:22px;margin-inline-end:auto;color:var(--green)}
+.logo small{font-family:Tajawal,sans-serif;font-weight:500;color:var(--soft);font-size:14px;margin-inline-start:8px}
+nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border-radius:99px;font-weight:700;font-size:16px}
+nav a:hover{background:var(--mint)}
+nav a.on{background:var(--ink);color:var(--bg)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+main{max-width:1000px;margin:0 auto;padding:0 20px 60px}
+.page{display:none}.page.on{display:block}
+.hero{padding:56px 0 36px}
+.hero h1{font-size:clamp(52px,12vw,120px);font-weight:900;margin:0;letter-spacing:-1px}
+.hero h1 span{display:block;color:var(--green)}
+.hero p{max-width:34em;color:var(--soft);font-size:20px}
+.beat{width:100%;height:70px;margin:10px 0 0}
+.beat path{fill:none;stroke:var(--sun);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.4s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.beat path{animation:none;stroke-dashoffset:0}}
+.btn{display:inline-block;background:var(--sun);color:#2a1004;font-weight:700;padding:10px 26px;border-radius:12px;text-decoration:none;font-family:Cairo,sans-serif;margin-top:8px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:34px 0}
+.pillar{padding:26px;border-radius:26px 6px 26px 6px;background:var(--mint);text-decoration:none;color:var(--ink);display:block}
+.pillar:nth-child(2){background:var(--surface);border:2px solid var(--line);border-radius:6px 26px 6px 26px}
+.pillar:nth-child(3){background:var(--ink);color:var(--bg)}
+.pillar b{font-family:Cairo,sans-serif;font-size:26px;display:block}
+.pillar i{font-style:normal;font-size:40px;display:block}
+.pillar em{font-style:normal;opacity:.7;font-size:14px}
+.sec{margin-top:44px}
+.sec h2{font-size:34px}
+.sum{background:var(--surface);border:2px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:14px}
+.sum h3{font-size:21px;color:var(--green)}
+.sum p{margin:0 0 6px}
+.src{font-size:14px;color:var(--soft)}
+.stat{display:flex;gap:18px;flex-wrap:wrap;margin:22px 0}
+.stat div{flex:1 1 200px;background:var(--surface);border-inline-start:8px solid var(--sun);padding:14px 20px;border-radius:12px}
+.stat b{font-family:Cairo,sans-serif;font-size:34px;display:block;line-height:1.2}
+.stat span{color:var(--soft);font-size:16px}
+.title{padding:44px 0 6px}
+.title h1{font-size:clamp(40px,8vw,72px);font-weight:900;margin:0}
+.title p{color:var(--soft);font-size:20px;margin:0}
+ul.tips{padding:0;list-style:none;display:grid;gap:10px}
+ul.tips li{background:var(--surface);border:2px solid var(--line);border-radius:14px;padding:12px 18px}
+ul.tips li::before{content:"✔";color:var(--green);margin-inline-end:10px;font-weight:900}
+.team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.member{background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:20px;text-align:center}
+.av{width:72px;height:72px;border-radius:50%;background:var(--mint);margin:0 auto 10px;display:grid;place-items:center;font-size:32px}
+.member b{font-family:Cairo,sans-serif;display:block}
+.member span{color:var(--soft);font-size:15px}
+footer{text-align:center;color:var(--soft);padding:26px;border-top:2px solid var(--line);font-size:15px}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">عِش بصحة<small>Live Well</small></div>
+  <a href="#home" data-p="home">الرئيسية</a>
+  <a href="#food" data-p="food">التغذية</a>
+  <a href="#sport" data-p="sport">الرياضة</a>
+  <a href="#sleep" data-p="sleep">النوم</a>
+  <a href="#about" data-p="about">من نحن</a>
+</nav>
+<main>
+
+<section class="page" id="home">
+  <div class="hero">
+    <h1>حياتك<span>أجمل بصحتك</span></h1>
+    <svg class="beat" viewBox="0 0 600 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 H200 L220 40 L235 8 L255 64 L272 24 L285 40 H600"/></svg>
+    <p>نمط الحياة الصحي ليس حمية مؤقتة، بل عادات صغيرة نكررها كل يوم: طعام متوازن، حركة منتظمة، ونوم كافٍ. ابدأ اليوم، فجسمك أمانة. <b>Small habits, big change.</b></p>
+    <a class="btn" href="#food">ابدأ رحلتك</a>
+  </div>
+
+  <div class="pillars">
+    <a class="pillar" href="#food"><i>🥗</i><b>التغذية</b><em>Eat Smart</em></a>
+    <a class="pillar" href="#sport"><i>🏃</i><b>الرياضة</b><em>Move More</em></a>
+    <a class="pillar" href="#sleep"><i>🌙</i><b>النوم</b><em>Rest Well</em></a>
+  </div>
+
+  <div class="sec">
+    <h2>لماذا نمط الحياة الصحي مهم؟</h2>
+    <div class="stat">
+      <div><b>150 دقيقة</b><span>نشاط بدني معتدل أسبوعيًا للبالغين</span></div>
+      <div><b>400 غرام</b><span>خضار وفواكه يوميًا على الأقل</span></div>
+      <div><b>7–9 ساعات</b><span>نوم يوميًا للبالغين</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2>ملخصات مقالات</h2>
+    <div class="sum"><h3>الغذاء المتوازن يحميك</h3><p>يقلل تنوّع الغذاء من خطر الأمراض المزمنة، ويُنصح بتقليل السكر والملح والدهون المشبعة والإكثار من الخضار والحبوب الكاملة.</p><div class="src">المصدر: منظمة الصحة العالمية (WHO) — Healthy diet</div></div>
+    <div class="sum"><h3>الحركة دواء مجاني</h3><p>النشاط البدني المنتظم يقوّي القلب والعظام ويحسّن المزاج، ولا يحتاج إلى نادٍ رياضي؛ فالمشي اليومي كافٍ للبداية.</p><div class="src">المصدر: منظمة الصحة العالمية (WHO) — Physical activity</div></div>
+    <div class="sum"><h3>النوم أساس التركيز</h3><p>قلة النوم تؤثر في الانتباه والذاكرة والمناعة، وانتظام موعد النوم يحسّن جودته.</p><div class="src">المصدر: Sleep Foundation</div></div>
+  </div>
+</section>
+
+<section class="page" id="food">
+  <div class="title"><h1>التغذية 🥗</h1><p>Eat Smart — اجعل صحنك ملوّنًا</p></div>
+  <div class="sec"><h2>نصائح بسيطة</h2>
+  <ul class="tips">
+    <li>املأ نصف صحنك بالخضار والفواكه.</li>
+    <li>اشرب الماء بدل المشروبات الغازية.</li>
+    <li>تناول وجبة الإفطار ولا تهملها.</li>
+    <li>قلل الوجبات السريعة والحلويات المصنّعة.</li>
+    <li>اقرأ الملصق الغذائي قبل الشراء.</li>
+  </ul></div>
+</section>
+
+<section class="page" id="sport">
+  <div class="title"><h1>الرياضة 🏃</h1><p>Move More — حرّك جسمك كل يوم</p></div>
+  <div class="stat">
+    <div><b>30 دقيقة</b><span>مشي سريع خمس مرات أسبوعيًا</span></div>
+    <div><b>10 دقائق</b><span>إحماء وتمدد قبل التمرين</span></div>
+  </div>
+  <div class="sec"><h2>ابدأ من هنا</h2>
+  <ul class="tips">
+    <li>استخدم الدرج بدل المصعد.</li>
+    <li>العب مع أصدقائك كرة القدم أو السلة.</li>
+    <li>قلل ساعات الجلوس أمام الشاشة.</li>
+    <li>اختر نشاطًا تحبه لتستمر عليه.</li>
+  </ul></div>
+</section>
+
+<section class="page" id="sleep">
+  <div class="title"><h1>النوم 🌙</h1><p>Rest Well — جسمك يتجدد وأنت نائم</p></div>
+  <div class="sec"><h2>عادات نوم أفضل</h2>
+  <ul class="tips">
+    <li>نم واستيقظ في الوقت نفسه يوميًا.</li>
+    <li>أبعد الهاتف عن سريرك قبل النوم بساعة.</li>
+    <li>اجعل غرفتك هادئة ومظلمة.</li>
+    <li>تجنب المشروبات التي تحتوي على الكافيين مساءً.</li>
+  </ul></div>
+</section>
+
+<section class="page" id="about">
+  <div class="title"><h1>من نحن</h1><p>About Us — مجموعة تؤمن بأن الصحة تبدأ بقرار</p></div>
+  <div class="sec">
+    <p>نحن مجموعة من الطلبة صمّمنا هذا الموقع ضمن مشروع الحياة الصحي. هدفنا نشر الوعي بأهمية نمط الحياة الصحي بأسلوب بسيط وممتع.</p>
+    <h2>أفراد المجموعة</h2>
+    <div class="team">
+      <div class="member"><div class="av">😎</div><b>علي رمضان</b><span>تصميم الصفحة الرئيسية</span></div>
+      <div class="member"><div class="av">🤓</div><b>فارس منصور</b><span>البحث والمقالات</span></div>
+      <div class="member"><div class="av">😄</div><b>اطلال امجد</b><span>صفحة من نحن</span></div>
+      <div class="member"><div class="av">🧐</div><b>اقصي ايمن</b><span>الصفحات الإضافية</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>صُمم بحب 💚 مشروع نمط الحياة الصحي · Live Well</footer>
+<script>
+(function(){
+  var pages=['home','food','sport','sleep','about'];
+  function show(){
+    var h=(location.hash||'#home').slice(1);
+    if(pages.indexOf(h)<0)h='home';
+    pages.forEach(function(p){
+      document.getElementById(p).classList.toggle('on',p===h);
+    });
+    document.querySelectorAll('nav a').forEach(function(a){
+      a.classList.toggle('on',a.getAttribute('data-p')===h);
+    });
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',show);
+  show();
+})();
+</script>
+</body>
+</html>
